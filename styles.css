@@ -61,7 +61,7 @@ button, input { font: inherit; }
 .eyebrow { margin: 0 0 20px; color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 .eyebrow span { display: inline-block; width: 32px; height: 2px; margin-right: 10px; vertical-align: middle; background: var(--aqua); }
 .hero h1, h2 { margin: 0; color: var(--navy-dark); font-weight: 800; line-height: 1.04; letter-spacing: -.055em; }
-.hero h1 { font-size: clamp(52px, 6vw, 82px); max-width: 750px; }
+.hero h1 { font-size: clamp(26px, calc((min(100vw - 40px, 1180px) - 90px) / 15.4), 72px); white-space: nowrap; }
 .hero h1 em { color: var(--blue); font-style: normal; }
 .hero-lead { max-width: 620px; margin: 28px 0 32px; color: var(--muted); font-size: 18px; line-height: 1.75; }
 .hero-actions { display: flex; align-items: center; gap: 28px; }
@@ -199,7 +199,7 @@ button, input { font: inherit; }
   .main-nav a { font-size: 29px; color: var(--navy); }
   .hero { min-height: auto; padding: 125px 0 70px; }
   .hero-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: clamp(48px, 13vw, 68px); }
+  .hero h1 { font-size: clamp(26px, calc((100vw - 40px) / 8), 64px); }
   .hero-visual { max-width: 560px; padding-left: 25px; }
   .hero-image-wrap { height: 600px; }
   .wave { display: none; }
