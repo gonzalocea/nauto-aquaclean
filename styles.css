@@ -88,9 +88,10 @@ button, input { font: inherit; }
 .section-heading.compact { margin-bottom: 40px; }
 .heading-centered { display: block; text-align: center; }
 .heading-centered .eyebrow { display: flex; align-items: center; justify-content: center; }
-.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .service-card { position: relative; min-height: 360px; padding: 34px 28px; background: white; border-right: 1px solid var(--line); transition: color .3s, background .3s, transform .3s; }
-.service-card:last-child { border-right: 0; }
+.service-card:nth-child(3n) { border-right: 0; }
+.service-card:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
 .service-card:hover { color: white; background: var(--navy); transform: translateY(-6px); }
 .service-number { color: #91a8b8; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
 .service-icon { display: grid; place-items: center; width: 64px; height: 64px; margin: 52px 0 26px; color: var(--blue); background: var(--aqua-light); border-radius: 50%; transition: background .3s; }
@@ -182,8 +183,9 @@ button, input { font: inherit; }
   .hero-grid { gap: 45px; }
   .hero-image-wrap { height: 520px; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
-  .service-card:nth-child(2) { border-right: 0; }
-  .service-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .service-card:nth-child(n) { border-right: 1px solid var(--line); border-bottom: 0; }
+  .service-card:nth-child(2n) { border-right: 0; }
+  .service-card:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
   .contact-logo { width: 220px; height: 220px; }
 }
 
@@ -227,8 +229,8 @@ button, input { font: inherit; }
   .image-label { top: 104px; right: 18px; }
   .hero-card { left: -4px; width: min(310px, 95%); }
   .service-grid { grid-template-columns: 1fr; }
-  .service-card { min-height: 300px; border-right: 0; border-bottom: 1px solid var(--line); }
-  .service-card:nth-child(3) { border-bottom: 1px solid var(--line); }
+  .service-card:nth-child(n) { min-height: 300px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .service-card:last-child { border-bottom: 0; }
   .service-icon { margin-top: 35px; }
   .comparison { height: 470px; }
   .gallery-grid { display: flex; flex-direction: column; }
